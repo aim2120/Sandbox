@@ -1,0 +1,17 @@
+name: CI
+
+on: 
+  push:
+    branches:    
+      - '**'    # matches every branch
+      - '!main' # excludes main
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  test:
+    runs-on: macos-13
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run TESTS
+        run: swift test
