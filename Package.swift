@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "Sandbox",
+    platforms: [.iOS(.v15), .macOS(.v13), .macCatalyst(.v15), .tvOS(.v16), .watchOS(.v9)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
